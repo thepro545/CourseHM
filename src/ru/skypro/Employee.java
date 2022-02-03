@@ -3,39 +3,22 @@ package ru.skypro;
 import java.util.Objects;
 
 public class Employee {
-    static int id = 0;
-    String fIO;
-    int department;
-    float salary;
+    private int id = 0;
+    private String fio;
+    private int department;
+    private float salary;
+    private static int counter = 1;
 
-        public Employee(String fIO, int department, float salary) {
-        this.fIO = fIO;
+        public Employee(String fio, int department, float salary) {
+        this.fio = fio;
         this.department = department;
         this.salary = salary;
-//        this.id = getId(id);
+        this.id = counter;
+        counter++;
     }
 
-//-----------------------------------------
-//    public Employee() {
-//        this.employeeStorage = new EmployeeBook[10];
-//    }
-//
-//    public void addEmployees(String fIO, int department, float salary) {
-//        EmployeeBook newEmployee = new EmployeeBook(id, fIO, department, salary);
-//        employeeStorage[size++] = newEmployee;
-//        id++;
-//    }
-//
-//    public void printAll() {
-//        for (int i = 0; i < 3; i++) {
-//            EmployeeBook employee = employeeStorage[i];
-//            System.out.println(id + employee.getId() + ": " + employee.getfIO());
-//        }
-//    }
-//-----------------------------------------------
-
-    public String getfIO() {
-        return fIO;
+    public String getfio() {
+        return fio;
     }
 
     public int getDepartment() {
@@ -46,8 +29,8 @@ public class Employee {
         return salary;
     }
 
-    public int getId(int id) {
-        return id++;
+    public int getId() {
+        return id;
     }
 
     public void setDepartment(int department) {
@@ -58,15 +41,12 @@ public class Employee {
         this.salary = salary;
     }
 
-    public static int addID() {
-        return id++;
-    }
 
     @Override
     public String toString() {
         return "Сотрудник {" +
                 "id=" + id +
-                ", ФИО = '" + fIO + '\'' +
+                ", ФИО = '" + fio + '\'' +
                 ", Отдел = " + department +
                 ", Зарплата = " + salary +
                 " рублей}";
@@ -77,12 +57,12 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return department == employee.department && Float.compare(employee.salary, salary) == 0 && id == employee.id && Objects.equals(fIO, employee.fIO);
+        return department == employee.department && Float.compare(employee.salary, salary) == 0 && id == employee.id && Objects.equals(fio, employee.fio);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(fIO, department, salary, id);
+        return Objects.hash(fio, department, salary, id);
     }
 
 }
