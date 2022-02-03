@@ -14,7 +14,7 @@ public class Main {
         employeeStorage[6] = new Employee("Petrova Nastya Ivanovna", 2, 33_334);
         employeeStorage[7] = new Employee("Vasilievna Vera Nicolaevna", 3, 60_000);
         employeeStorage[8] = new Employee("Igorevna Nadya Semenovna", 4, 39_000);
-//        employeeStorage[9] = new Employee("Morozova Nika Dmitrievna", 5, 80_000);
+        employeeStorage[9] = new Employee("Morozova Nika Dmitrievna", 5, 80_000);
 
 //        getFullList(employeeStorage); // Задание 8 A
 //        float fullSalary = getFullSalary(employeeStorage); // Задание 8 B
