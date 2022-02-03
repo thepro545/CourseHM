@@ -8,16 +8,31 @@ public class Employee {
     int department;
     float salary;
 
-    public Employee(String fIO, int department, float salary) {
-        Object id;
+        public Employee(String fIO, int department, float salary) {
         this.fIO = fIO;
         this.department = department;
         this.salary = salary;
+//        this.id = getId(id);
     }
-    // int id = 1;
-//     public Employee() {
-//    }
 
+//-----------------------------------------
+//    public Employee() {
+//        this.employeeStorage = new EmployeeBook[10];
+//    }
+//
+//    public void addEmployees(String fIO, int department, float salary) {
+//        EmployeeBook newEmployee = new EmployeeBook(id, fIO, department, salary);
+//        employeeStorage[size++] = newEmployee;
+//        id++;
+//    }
+//
+//    public void printAll() {
+//        for (int i = 0; i < 3; i++) {
+//            EmployeeBook employee = employeeStorage[i];
+//            System.out.println(id + employee.getId() + ": " + employee.getfIO());
+//        }
+//    }
+//-----------------------------------------------
 
     public String getfIO() {
         return fIO;
@@ -31,8 +46,8 @@ public class Employee {
         return salary;
     }
 
-    public int getId() {
-        return id;
+    public int getId(int id) {
+        return id++;
     }
 
     public void setDepartment(int department) {
